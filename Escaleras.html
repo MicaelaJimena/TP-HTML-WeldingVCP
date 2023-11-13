@@ -10,34 +10,53 @@
             flex-wrap: wrap;
             list-style: none;
             padding: 0;
+            justify-content: center; /* Centra las imágenes horizontalmente */
         }
         .photo-list-item {
             width: 30%;
             padding: 10px;
             box-sizing: border-box;
             text-align: center;
+            margin-bottom: 20px;
         }
         .photo {
             max-width: 100%;
             height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .photo-list-item:hover .photo {
+            transform: scale(1.5);
+            display: block;
+            margin: 0 auto;
         }
         .subtitle {
             font-style: italic;
+        }
+        .back-to-home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4b8cff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back-to-home-button:hover {
+            background-color: #3366cc;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Escaleras</h1>
+        <a href="indexWVCP.html" class="back-to-home-button">Volver a Inicio</a>
     </header>
 
-    <!-- Contenido de la página de Mangrullos -->
     <div class="content">
-        <h2>Escaleras de Interior y Exterior  </h2>
-       
+        <h2>Fotos de Escaleras</h2>
 
         <ol class="photo-list">
-        
             <li class="photo-list-item">
                 <img class="photo" src="./asset/Escalera.jpg" alt="Escalera 1">
                 <p class="subtitle">Escalera.</p>
@@ -59,7 +78,7 @@
                 <p class="subtitle">Escalera</p>
             </li>
             <li class="photo-list-item">
-                <img class="photo" src="./asset/Escalera6.jpg" alt="Cerramientos 6">
+                <img class="photo" src="./asset/Escalera6.jpg" alt="Escalera 6">
                 <p class="subtitle">Escalera</p>
             </li>
             <!-- Puedes agregar más imágenes y subtítulos según sea necesario -->

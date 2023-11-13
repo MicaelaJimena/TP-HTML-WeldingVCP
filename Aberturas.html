@@ -4,6 +4,8 @@
     <title>WeldingVCP</title>
     <link rel="icon" href="./asset/Welding.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Enlazar tu archivo de estilos CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
     <style>
         .photo-list {
             display: flex;
@@ -22,16 +24,29 @@
             height: auto;
         }
         .subtitle {
-            font-style: italic;
+            font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */
+        }
+        .back-to-home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4b8cff; /* Color de fondo del botón (ajusta según tu paleta de colores) */
+            color: #fff; /* Color del texto del botón */
+            text-decoration: none;
+            border-radius: 5px; /* Bordes redondeados */
+            margin-top: 20px; /* Espacio superior para separar el botón del contenido */
+        }.back-to-home-button:hover {
+            background-color: #3366cc; /* Cambia el color al pasar el mouse */
         }
     </style>
 </head>
 <body>
     <header>
+       
         <h1>Aberturas</h1>
+        <a href="indexWVCP.html" class="back-to-home-button">Volver a Inicio</a>
     </header>
 
-    <!-- Contenido de la página de Mangrullos -->
+  
     <div class="content">
         <h2>Fotos de Aberturas de interior y exterior</h2>
        
@@ -61,7 +76,7 @@
                 <img class="photo" src="./asset/PuertaInt4.jpg" alt="PuertaInt 3">
                 <p class="subtitle">Puerta Vidrio Repartido Corrediza</p>
             </li>
-            <!-- Puedes agregar más imágenes y subtítulos según sea necesario -->
+            
         </ol>
     </div>
 </body>

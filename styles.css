@@ -8,7 +8,13 @@ nav ul {
 nav ul li {
     display: inline; /* Hace que los elementos se muestren en línea (uno al lado del otro) */
     margin-right: 10px; /* Espacio entre elementos (ajusta según tu preferencia) */
+    color: rgb(4, 27, 68); /* Cambia el color del texto a azul oscuro */
+    
+
+
 }
+
+
 
 /* Estilos para centrar contenido */
 .centered-content {
@@ -21,9 +27,7 @@ nav ul li {
     background-color: transparent; /* Establece el fondo del contenedor como transparente */
 }
 
-.white-text {
-    color: rgba(7, 36, 85, 0);
-}
+
 
 .large-text {
     font-size: 24px;
@@ -34,14 +38,126 @@ nav ul li {
     color: rgb(4, 27, 68); /* Establece el color de texto en blanco */
 }
 .large-text {
-    font-size: 30px; /* Establece el tamaño de fuente a 24 píxeles (ajusta según tus preferencias) */
+    font-size: 24px; /* Establece el tamaño de fuente a 24 píxeles (ajusta según tus preferencias) */
 }
 
 .header-top {
     background-image: url('./asset/Portada.jpg');
-    background-size: 100% 400%; /* La imagen de fondo ocupará el 100% del ancho y el 100% de la altura de la sección header-top */
-    background-position: center center ; /* La imagen de fondo se centrará horizontalmente y se alineará en la parte superior */
-    background-repeat: no-repeat; /* La imagen de fondo no se repetirá */
-    height: 50vh; /* Ajusta la altura de header-top al 50% de la altura de la ventana */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área */
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+   
+}
+
+nav ul li:hover {
+    background-color: #dddddd; /* Cambiar el color de fondo al pasar el mouse */
+}
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.photo-list-item {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    border: 1px solid #ddd; /* Borde ligero alrededor de las tarjetas */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que las imágenes se salgan del contenedor al agrandarse */
+    transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+.photo-list-item:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.3s ease; /* Aplica la misma transición a las imágenes */
+}
+
+.photo-list-item:hover .photo {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse sobre su contenedor */
+}
+
+.title, nav, body, h1, h2, h3, h4, h5, h6, .subtitle {
+    font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-image: url('./asset/Fondoregistro.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    border-radius: 10px;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.close {
+    color: #fa0404;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #d40000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content label {
+    color: white; /* Establece el color del texto del label a blanco */
+}
+
+.follow-us {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.follow-us h2 {
+    color: #333;
+}
+
+.follow-us p {
+    color: #666;
+}
+
+.follow-us a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4b8cff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.follow-us a:hover {
+    background-color: #3366cc;
 }
 
