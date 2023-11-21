@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>WeldingVCP</title>
     <link rel="icon" href="./asset/Welding.jpg" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Enlazar tu archivo de estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         .photo-list {
             display: flex;
@@ -22,19 +22,19 @@
             height: auto;
         }
         .subtitle {
-            font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */
+            font-family: 'Roboto', sans-serif;
         }
         .back-to-home-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #4b8cff; /* Color de fondo del botón (ajusta según tu paleta de colores) */
-            color: #fff; /* Color del texto del botón */
+            background-color: #4b8cff;
+            color: #fff;
             text-decoration: none;
-            border-radius: 5px; /* Bordes redondeados */
-            margin-top: 20px; /* Espacio superior para separar el botón del contenido */
+            border-radius: 5px;
+            margin-top: 20px;
         }
         .back-to-home-button:hover {
-            background-color: #3366cc; /* Cambia el color al pasar el mouse */
+            background-color: #3366cc;
         }
     </style>
 </head>
@@ -47,19 +47,45 @@
     <div class="content">
         <h2>Fotos de Escaleras</h2>
 
-        <ol class="photo-list">
-            <!-- Puedes agregar más productos según sea necesario -->
-            <script src="productCard.js"></script>
-            <script>
-                const products = [
-                    { image: './asset/Escalera.jpg', title: 'Escalera' },
-                    { image: './asset/Escalera2.jpg', title: 'Escalera' },
-                    { image: './asset/Escalera3.jpg', title: 'Escalera' },
-                    { image: './asset/Escalera4.jpg', title: 'Escalera' },
-                    { image: './asset/Escalera5.jpg', title: 'Escalera' },
-                    { image: './asset/Escalera6.jpg', title: 'Escalera' },
-                ];
+        <ol class="photo-list" id="photo-list"></ol>
 
-                const photoList = document.querySelector('.photo-list');
+        <script src="productCard.js"></script>
+        <script>
+            const products = [
+                { image: './asset/Escalera.jpg', title: 'Escalera' },
+                { image: './asset/Escalera2.jpg', title: 'Escalera' },
+                { image: './asset/Escalera3.jpg', title: 'Escalera' },
+                { image: './asset/Escalera4.jpg', title: 'Escalera' },
+                { image: './asset/Escalera5.jpg', title: 'Escalera' },
+                { image: './asset/Escalera6.jpg', title: 'Escalera' },
+            ];
 
- 
+            const photoList = document.getElementById('photo-list');
+
+            products.forEach(product => {
+                const productCard = createProductCard(product);
+                photoList.appendChild(productCard);
+            });
+
+            function createProductCard(product) {
+                const listItem = document.createElement('li');
+                listItem.className = 'photo-list-item';
+
+                const image = document.createElement('img');
+                image.src = product.image;
+                image.alt = product.title;
+                image.className = 'photo';
+
+                const subtitle = document.createElement('p');
+                subtitle.className = 'subtitle';
+                subtitle.textContent = product.title;
+
+                listItem.appendChild(image);
+                listItem.appendChild(subtitle);
+
+                return listItem;
+            }
+        </script>
+    </div>
+</body>
+</html>
