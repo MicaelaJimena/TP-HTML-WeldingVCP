@@ -10,40 +10,31 @@
             flex-wrap: wrap;
             list-style: none;
             padding: 0;
-            justify-content: center; /* Centra las imágenes horizontalmente */
         }
         .photo-list-item {
             width: 30%;
             padding: 10px;
             box-sizing: border-box;
             text-align: center;
-            margin-bottom: 20px;
         }
         .photo {
             max-width: 100%;
             height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .photo-list-item:hover .photo {
-            transform: scale(1.5);
-            display: block;
-            margin: 0 auto;
         }
         .subtitle {
-            font-style: italic;
+            font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */
         }
         .back-to-home-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #4b8cff;
-            color: #fff;
+            background-color: #4b8cff; /* Color de fondo del botón (ajusta según tu paleta de colores) */
+            color: #fff; /* Color del texto del botón */
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 5px; /* Bordes redondeados */
+            margin-top: 20px; /* Espacio superior para separar el botón del contenido */
         }
         .back-to-home-button:hover {
-            background-color: #3366cc;
+            background-color: #3366cc; /* Cambia el color al pasar el mouse */
         }
     </style>
 </head>
@@ -54,16 +45,17 @@
     </header>
 
     <div class="content">
-        <h2>Fotos de Modulos</h2>
+        <h2>Fotos de Módulos</h2>
 
         <ol class="photo-list">
+            <!-- Puedes agregar más productos según sea necesario -->
             <li class="photo-list-item">
                 <img class="photo" src="./asset/Modulo1.jpg" alt="Modulo 1">
-                <p class="subtitle">Modulos.</p>
+                <p class="subtitle">Módulos.</p>
             </li>
             <li class="photo-list-item">
                 <img class="photo" src="./asset/Modulos2.jpg" alt="Modulo 2">
-                <p class="subtitle">Modulos</p>
+                <p class="subtitle">Módulos</p>
             </li>
             <!-- Puedes agregar más imágenes y subtítulos según sea necesario -->
         </ol>

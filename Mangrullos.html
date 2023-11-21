@@ -10,40 +10,31 @@
             flex-wrap: wrap;
             list-style: none;
             padding: 0;
-            justify-content: center; /* Centra las imágenes horizontalmente */
         }
         .photo-list-item {
             width: 30%;
             padding: 10px;
             box-sizing: border-box;
             text-align: center;
-            margin-bottom: 20px;
         }
         .photo {
             max-width: 100%;
             height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .photo-list-item:hover .photo {
-            transform: scale(1.5);
-            display: block;
-            margin: 0 auto;
         }
         .subtitle {
-            font-style: italic;
+            font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */
         }
         .back-to-home-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #4b8cff;
-            color: #fff;
+            background-color: #4b8cff; /* Color de fondo del botón (ajusta según tu paleta de colores) */
+            color: #fff; /* Color del texto del botón */
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 5px; /* Bordes redondeados */
+            margin-top: 20px; /* Espacio superior para separar el botón del contenido */
         }
         .back-to-home-button:hover {
-            background-color: #3366cc;
+            background-color: #3366cc; /* Cambia el color al pasar el mouse */
         }
     </style>
 </head>
@@ -55,37 +46,28 @@
 
     <div class="content">
         <h2>Algunos Ejemplos de Mangrullos</h2>
-       
 
         <ol class="photo-list">
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Mangrullo1.jpg" alt="Mangrullo 1">
-                <p class="subtitle">Mangrullo para tanque de 1000ls Negro </p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Mangrullo2.jpg" alt="Mangrullo 2">
-                <p class="subtitle">Mangrullo para tanque de 1000ls Negro con estructura de cerramiento.</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Mangrullo3.jpg" alt="Mangrullo 3">
-                <p class="subtitle">Mangrullo para tanque de 1000ls Negro con estructura para tanque solar Blanco</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Mangrullo4.jpg" alt="Mangrullo 4">
-                <p class="subtitle">Mangrullo para tanque de 1000ls Negro con estructura para tanque solar Negro</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Mangrullo5.jpg" alt="Mangrullo 5">
-                <p class="subtitle">Mangrullo Doble Grande Negro</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Mangrullo6.jpg" alt="Mangrullo 6">
-                <p class="subtitle">Mangrullo Doble Verde</p>
-            </li>
-            <!-- Puedes agregar más imágenes y subtítulos según sea necesario -->
+            <!-- Puedes agregar más productos según sea necesario -->
+            <script src="productCard.js"></script>
+            <script>
+                const products = [
+                    { image: './asset/Mangrullo1.jpg', title: 'Mangrullo para tanque de 1000ls Negro' },
+                    { image: './asset/Mangrullo2.jpg', title: 'Mangrullo para tanque de 1000ls Negro con estructura de cerramiento.' },
+                    { image: './asset/Mangrullo3.jpg', title: 'Mangrullo para tanque de 1000ls Negro con estructura para tanque solar Blanco' },
+                    { image: './asset/Mangrullo4.jpg', title: 'Mangrullo para tanque de 1000ls Negro con estructura para tanque solar Negro' },
+                    { image: './asset/Mangrullo5.jpg', title: 'Mangrullo Doble Grande Negro' },
+                    { image: './asset/Mangrullo6.jpg', title: 'Mangrullo Doble Verde' },
+                ];
+
+                const photoList = document.querySelector('.photo-list');
+
+                products.forEach(product => {
+                    const productCard = createProductCard(product);
+                    photoList.appendChild(productCard);
+                });
+            </script>
         </ol>
     </div>
 </body>
 </html>
-
-

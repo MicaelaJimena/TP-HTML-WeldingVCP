@@ -10,40 +10,31 @@
             flex-wrap: wrap;
             list-style: none;
             padding: 0;
-            justify-content: center; /* Centra las imágenes horizontalmente */
         }
         .photo-list-item {
             width: 30%;
             padding: 10px;
             box-sizing: border-box;
             text-align: center;
-            margin-bottom: 20px;
         }
         .photo {
             max-width: 100%;
             height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-        .photo-list-item:hover .photo {
-            transform: scale(1.5);
-            display: block;
-            margin: 0 auto;
         }
         .subtitle {
-            font-style: italic;
+            font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */
         }
         .back-to-home-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #4b8cff;
-            color: #fff;
+            background-color: #4b8cff; /* Color de fondo del botón (ajusta según tu paleta de colores) */
+            color: #fff; /* Color del texto del botón */
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 5px; /* Bordes redondeados */
+            margin-top: 20px; /* Espacio superior para separar el botón del contenido */
         }
         .back-to-home-button:hover {
-            background-color: #3366cc;
+            background-color: #3366cc; /* Cambia el color al pasar el mouse */
         }
     </style>
 </head>
@@ -54,34 +45,28 @@
     </header>
 
     <div class="content">
-        <h2>Fotos de  Portones  </h2>
+        <h2>Fotos de Portones</h2>
 
         <ol class="photo-list">
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Cerramientos1.jpg" alt="Cerramientos 1">
-                <p class="subtitle">Porton.</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Cerramientos2.jpg" alt="Cerramientos 2">
-                <p class="subtitle">Porton / Postigos con Madera</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Cerramientos3.jpg" alt="Cerramientos 3">
-                <p class="subtitle">Porton </p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Cerramientos4.jpg" alt="Cerramientos 4">
-                <p class="subtitle">Porton</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Cerramientos5.jpg" alt="Cerramientos 5">
-                <p class="subtitle">Porton</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Cerramientos6.jpg" alt="Cerramientos 6">
-                <p class="subtitle">Porton con Madera</p>
-            </li>
-            <!-- Puedes agregar más imágenes y subtítulos según sea necesario -->
+            <!-- Puedes agregar más productos según sea necesario -->
+            <script src="productCard.js"></script>
+            <script>
+                const products = [
+                    { image: './asset/Cerramientos1.jpg', title: 'Porton' },
+                    { image: './asset/Cerramientos2.jpg', title: 'Porton / Postigos con Madera' },
+                    { image: './asset/Cerramientos3.jpg', title: 'Porton' },
+                    { image: './asset/Cerramientos4.jpg', title: 'Porton' },
+                    { image: './asset/Cerramientos5.jpg', title: 'Porton' },
+                    { image: './asset/Cerramientos6.jpg', title: 'Porton con Madera' },
+                ];
+
+                const photoList = document.querySelector('.photo-list');
+
+                products.forEach(product => {
+                    const productCard = createProductCard(product);
+                    photoList.appendChild(productCard);
+                });
+            </script>
         </ol>
     </div>
 </body>

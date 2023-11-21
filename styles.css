@@ -1,8 +1,14 @@
 /* Estilos para el menú de navegación */
+nav {
+    background-color: #fff; /* Agrega un color de fondo al navbar */
+    padding: 10px; /* Añade un espacio interno al navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra al navbar */
+}
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    color: #333; /* Cambia el color del texto a un tono más oscuro */
 }
 
 nav ul li {
@@ -51,7 +57,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: #dddddd; /* Cambiar el color de fondo al pasar el mouse */
+    background-color: #ddd;
 }
 .photo-list {
     display: flex;
@@ -62,31 +68,33 @@ nav ul li:hover {
 }
 
 .photo-list-item {
-    width: 30%;
+    width: 20%; /* Cambia el ancho de las tarjetas según tu preferencia */
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
-    margin-bottom: 20px; /* Espacio entre las tarjetas */
-    border: 1px solid #ddd; /* Borde ligero alrededor de las tarjetas */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Evita que las imágenes se salgan del contenedor al agrandarse */
-    transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+.photo-list-item .title {
+    font-size: 18px; /* Tamaño del título */
+    margin-bottom: 10px; /* Espacio entre el título y la imagen */
 }
 
-.photo-list-item:hover {
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
-}
+
+
+
 
 .photo {
     max-width: 100%;
     height: auto;
     border-radius: 5px; /* Bordes redondeados para las imágenes */
-    transition: transform 0.3s ease; /* Aplica la misma transición a las imágenes */
+    
 }
 
-.photo-list-item:hover .photo {
-    transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse sobre su contenedor */
-}
+
 
 .title, nav, body, h1, h2, h3, h4, h5, h6, .subtitle {
     font-family: 'Roboto', sans-serif; /* Puedes reemplazar 'Roboto' con la fuente que elijas */

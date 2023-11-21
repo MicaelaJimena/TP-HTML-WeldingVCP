@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>WeldingVCP</title>
     <link rel="icon" href="./asset/Welding.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Enlazar tu archivo de estilos CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <meta charset="UTF-8"> 
+    <!-- Inside the <head> tag of login.html -->
+<script>
+    function redirectToMainPage() {
+        // Assuming 'indexWVCP.html' is the main page after login
+        window.location.href = 'indexWVCP.html';
+    }
+</script>
+
 </head>
 <body>
     <header>
@@ -14,7 +22,6 @@
                 <ul>
                     <li><a href="indexWVCP.html">Inicio</a></li>
                     <li><a href="login.html">Iniciar Sesión</a></li>
-                    
                 </ul>
             </nav>
             <h1>BIENVENIDO A WeldingVCP</h1>
@@ -33,9 +40,6 @@
     </header>
        
     <!-- Contenido de la página de inicio -->
-
-
-
     <div class="centered-content"> <!-- Contenedor para centrar contenido -->
         <article class="white-text large-text"> 
             <h4>
@@ -45,7 +49,6 @@
                 <p>Te invitamos a que conozcas los servicios que brindamos y la calidad de trabajos que realizamos.</p>
             </h4>
         </article>
-        
     </div>
     <div class="follow-us">
         <img src="./asset/Welding.jpg" alt="WeldingVCP Logo" width="350">
@@ -53,9 +56,6 @@
         <p>No te pierdas nuestras últimas actualizaciones y proyectos. ¡Haz clic en Me Gusta!</p>
         <a href="https://www.facebook.com/weldingvcp" target="_blank">Síguenos en Facebook</a>
     </div>
-
-   
-</div>
-    
+    <script src="navbar.js"></script>
 </body>
 </html>

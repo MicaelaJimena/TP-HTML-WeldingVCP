@@ -11,8 +11,8 @@
             display: flex;
             flex-wrap: wrap;
             list-style: none;
-                                    padding: 0;
-                                }
+            padding: 0;
+        }
         .photo-list-item {
             width: 30%;
             padding: 10px;
@@ -34,49 +34,41 @@
             text-decoration: none;
             border-radius: 5px; /* Bordes redondeados */
             margin-top: 20px; /* Espacio superior para separar el botón del contenido */
-        }.back-to-home-button:hover {
+        }
+        .back-to-home-button:hover {
             background-color: #3366cc; /* Cambia el color al pasar el mouse */
         }
     </style>
 </head>
 <body>
     <header>
-       
         <h1>Aberturas</h1>
         <a href="indexWVCP.html" class="back-to-home-button">Volver a Inicio</a>
     </header>
 
-  
     <div class="content">
         <h2>Fotos de Aberturas de interior y exterior</h2>
-       
 
         <ol class="photo-list">
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Puerta1.jpg" alt="Puerta 1">
-                <p class="subtitle">Puerta Vidrio Repartido </p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Puerta2.jpg" alt="Puerta 2">
-                <p class="subtitle">Puerta Vidrio Repartido.</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/Puerta3.jpg" alt="Puerta 3">
-                <p class="subtitle">Puerta Ventana / Ventana</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/PuertaInt1.jpg" alt="PuertaInt 1">
-                <p class="subtitle">Puerta Interior Vidrio Repartido</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/PuertaInt3.jpg" alt="PuertaInt 2">
-                <p class="subtitle">Puerta Interior Vidrio Repartido</p>
-            </li>
-            <li class="photo-list-item">
-                <img class="photo" src="./asset/PuertaInt4.jpg" alt="PuertaInt 3">
-                <p class="subtitle">Puerta Vidrio Repartido Corrediza</p>
-            </li>
-            
+            <!-- Puedes agregar más productos según sea necesario -->
+            <script src="productCard.js"></script>
+            <script>
+                const products = [
+                    { image: './asset/Puerta1.jpg', title: 'Puerta Vidrio Repartido' },
+                    { image: './asset/Puerta2.jpg', title: 'Puerta Vidrio Repartido' },
+                    { image: './asset/Puerta3.jpg', title: 'Puerta Ventana / Ventana' },
+                    { image: './asset/PuertaInt1.jpg', title: 'Puerta Interior Vidrio Repartido' },
+                    { image: './asset/PuertaInt2.jpg', title: 'Puerta Interior Vidrio Repartido' },
+                    { image: './asset/PuertaInt3.jpg', title: 'Puerta Vidrio Repartido Corrediza' },
+                ];
+
+                const photoList = document.querySelector('.photo-list');
+
+                products.forEach(product => {
+                    const productCard = createProductCard(product);
+                    photoList.appendChild(productCard);
+                });
+            </script>
         </ol>
     </div>
 </body>

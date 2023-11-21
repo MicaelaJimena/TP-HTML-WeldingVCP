@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Enlazar tu archivo de estilos CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <meta charset="UTF-8"> 
+    <script src="login.js"></script>
 
     <style>
         body {
@@ -96,7 +97,7 @@
 <body>
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
-        <form action="procesar_login.html" method="post">
+        <form action="procesar_login.html" method="post"onsubmit="redirectToMainPage(); return false;">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
@@ -157,6 +158,7 @@
         const openRegisterModal = document.getElementById("openRegisterModal");
         const registerModal = document.getElementById("registerModal");
         const closeRegisterModal = document.getElementById("closeRegisterModal");
+        const loginForm = document.querySelector("form");
 
         openRegisterModal.addEventListener("click", () => {
             registerModal.style.display = "block";
@@ -170,6 +172,10 @@
             if (event.target === registerModal) {
                 registerModal.style.display = "none";
             }
+        });
+        loginForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            window.location.href = loginForm.getAttribute("action");
         });
     </script>
 </body>
